@@ -17,7 +17,7 @@ Replace manual per-variant combo items with Product Template level sources:
     'author': "Flous Flow",
     'website': "https://flousflow.com",
     'category': 'Sales/Sales',
-    'version': '19.0.1.1.0',
+    'version': '19.0.1.2.0',
     'license': 'LGPL-3',
     'images': [
         'static/description/icon.png',

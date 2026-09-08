@@ -1,9 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
 <section style="max-width:900px;margin:0 auto;padding:0 16px;font-family:'Helvetica Neue',Arial,sans-serif;color:#222;">
 
-    <img src="/ff_sale_combo_variants/static/description/thumbnail.png"
+    <img src="thumbnail.png"
          style="width:100%;border-radius:12px;margin-top:16px;" alt="Smart Combo Variant Sources"/>
 
-    <img src="/ff_sale_combo_variants/static/description/banner.png"
+    <img src="banner.png"
          style="width:100%;border-radius:12px;margin-top:16px;" alt="Smart Combo Variant Sources"/>
 
     <h2 style="color:#0f3460;margin-top:32px;">Stop Managing Combo Variants Manually</h2>
@@ -14,14 +21,14 @@
         automatically and idempotently.
     </p>
 
-    <h3 style="color:#0f3460;">🧩 Variant Modes</h3>
+    <h3 style="color:#0f3460;">Variant Modes</h3>
     <ul style="line-height:1.8;">
         <li><strong>Single Variant</strong> — exactly one variant (classic behavior)</li>
         <li><strong>All Variants</strong> — every active variant of the template becomes a valid choice</li>
         <li><strong>Selected Variants</strong> — tick only the variants you allow</li>
     </ul>
 
-    <h3 style="color:#0f3460;">⚡ Automatic Targeted Sync</h3>
+    <h3 style="color:#0f3460;">Automatic Targeted Sync</h3>
     <ul style="line-height:1.8;">
         <li>New variants are added to linked combo choices automatically</li>
         <li>Archived variants are removed from new sales — historical orders stay intact</li>
@@ -29,7 +36,7 @@
         <li>Hourly safety-net cron + manual "Sync Variants Now" button</li>
     </ul>
 
-    <h3 style="color:#0f3460;">🛒 Hierarchical Sales UX</h3>
+    <h3 style="color:#0f3460;">Hierarchical Sales UX</h3>
     <p style="line-height:1.6;">
         Instead of a flat list of 100 variants, the salesperson first picks the
         <strong>Product Template</strong> (e.g. Pepsi, Lenovo ThinkPad), then selects the
@@ -38,14 +45,14 @@
         Delivery, invoicing and COGS follow the standard Odoo flow.
     </p>
 
-    <h3 style="color:#0f3460;">💰 Flexible Pricing</h3>
+    <h3 style="color:#0f3460;">Flexible Pricing</h3>
     <ul style="line-height:1.8;">
         <li>Default extra price per source</li>
         <li>Per-variant price overrides</li>
         <li>Standard combo proration keeps prices consistent</li>
     </ul>
 
-    <h3 style="color:#0f3460;">🛡️ Safety First</h3>
+    <h3 style="color:#0f3460;">Safety First</h3>
     <ul style="line-height:1.8;">
         <li><strong>No core modification</strong> — model/view/controller inheritance + OWL patch only</li>
         <li>Existing (manual) combos keep working 100% unchanged</li>
@@ -54,13 +61,13 @@
         <li>Source deletion blocked when referenced by historical sale orders</li>
     </ul>
 
-    <h3 style="color:#0f3460;">📌 Configuration</h3>
+    <h3 style="color:#0f3460;">Configuration</h3>
     <p style="line-height:1.7;">
         Menu: <em>Sales → Configuration → Products → Smart Variant Sources</em><br/>
         Requires <em>Variant Sources: Manager</em> rights (implied: Product Manager).
     </p>
 
-    <h3 style="color:#0f3460;">🚀 Installation</h3>
+    <h3 style="color:#0f3460;">Installation</h3>
     <ol style="line-height:1.8;">
         <li>Install <code>sale_management</code> (Sales) — included in standard Odoo</li>
         <li>Add this module to your addons path</li>
@@ -68,7 +75,7 @@
         <li>Grant the <em>Variant Sources: Manager</em> group to product administrators</li>
     </ol>
 
-    <h3 style="color:#0f3460;">✅ Quality</h3>
+    <h3 style="color:#0f3460;">Quality</h3>
     <p style="line-height:1.7;">
         12 automated tests covering all variant modes, auto-sync, idempotency, archiving,
         manual-item isolation, multi-company and the full quotation flow.
@@ -76,8 +83,11 @@
 
     <hr style="margin-top:40px;border:none;border-top:1px solid #ddd;"/>
     <p style="color:#888;font-size:13px;">
-        Published by <strong>Flous Flow</strong> ·
-        <a href="https://flousflow.com">flousflow.com</a> ·
+        Published by <strong>Flous Flow</strong> &middot;
+        <a href="https://flousflow.com">flousflow.com</a> &middot;
         License: LGPL-3
     </p>
 </section>
+
+</body>
+</html>
