@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Smart Variant Sources: list -->
+    <record id="ff_variant_source_view_list" model="ir.ui.view">
+        <field name="name">ff.variant.source.list</field>
+        <field name="model">ff.variant.source</field>
+        <field name="arch" type="xml">
+            <list decoration-warning="is_outdated" sample="1">
+                <field name="sequence" widget="handle"/>
+                <field name="combo_id"/>
+                <field name="product_tmpl_id"/>
+                <field name="variant_mode" widget="badge"/>
+                <field name="eligible_variant_count" string="Eligible"/>
+                <field name="generated_item_count" string="Generated"/>
+                <field name="auto_sync" widget="boolean_toggle"/>
+                <field name="is_outdated" column_invisible="1"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Smart Variant Sources: form -->
+    <record id="ff_variant_source_view_form" model="ir.ui.view">
+        <field name="name">ff.variant.source.form</field>
+        <field name="model">ff.variant.source</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_sync_now" type="object"
+                            string="Sync Variants Now" class="btn-primary"
+                            icon="fa-refresh"/>
+                    <field name="is_outdated" invisible="1"/>
+                    <span class="text-warning fw-bold" invisible="not is_outdated">
+                        Out of sync — run Sync Variants Now
+                    </span>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_generated_items" type="object"
+                                class="oe_stat_button" icon="fa-list">
+                            <field name="generated_item_count" widget="statinfo" string="Generated Items"/>
+                        </button>
+                        <button name="action_open_template" type="object"
+                                class="oe_stat_button" icon="fa-cube">
+                            <field name="product_tmpl_id" widget="statinfo" string="Template"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="combo_id" required="1"/>
+                            <field name="product_tmpl_id" required="1"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="variant_mode" widget="radio"/>
+                            <field name="product_variant_id" invisible="variant_mode != 'single'" required="variant_mode == 'single'"/>
+                            <field name="selected_variant_ids" invisible="variant_mode != 'selected'" widget="many2many_checkboxes" required="variant_mode == 'selected'"/>
+                            <field name="auto_sync"/>
+                            <field name="default_extra_price"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Eligible Variants" name="eligible">
+                            <field name="eligible_variant_ids" readonly="1" widget="many2many_tags"/>
+                        </page>
+                        <page string="Variant Prices" name="prices">
+                            <field name="price_ids">
+                                <list editable="bottom">
+                                    <field name="product_variant_id"/>
+                                    <field name="extra_price"/>
+                                    <field name="company_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Generated Items" name="generated">
+                            <field name="generated_item_ids" readonly="1" no_create="1">
+                                <list>
+                                    <field name="product_id"/>
+                                    <field name="extra_price"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="ff_variant_source_view_search" model="ir.ui.view">
+        <field name="name">ff.variant.source.search</field>
+        <field name="model">ff.variant.source</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_tmpl_id"/>
+                <field name="combo_id"/>
+                <filter name="outdated" string="Out of Sync" domain="[('is_outdated', '=', True)]"/>
+                <filter name="autosync" string="Auto Sync" domain="[('auto_sync', '=', True)]"/>
+                <group>
+                    <filter name="group_combo" string="Combo Choice" context="{'group_by': 'combo_id'}"/>
+                    <filter name="group_template" string="Product Template" context="{'group_by': 'product_tmpl_id'}"/>
+                    <filter name="group_mode" string="Variant Mode" context="{'group_by': 'variant_mode'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="ff_variant_source_action" model="ir.actions.act_window">
+        <field name="name">Smart Variant Sources</field>
+        <field name="res_model">ff.variant.source</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Configure template-level variant sources</p>
+            <p>Add a product template to a combo choice once instead of adding every variant manually.</p>
+        </field>
+    </record>
+</odoo>

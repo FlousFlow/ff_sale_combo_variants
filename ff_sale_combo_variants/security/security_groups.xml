@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="privilege_smart_variant_sources" model="res.groups.privilege">
+        <field name="name">Smart Variant Sources</field>
+        <field name="sequence">45</field>
+    </record>
+    <record id="group_variant_source_user" model="res.groups">
+        <field name="name">Variant Sources: User</field>
+        <field name="privilege_id" ref="privilege_smart_variant_sources"/>
+        <field name="sequence">10</field>
+        <field name="implied_ids" eval="[Command.link(ref('base.group_user'))]"/>
+    </record>
+    <record id="group_variant_source_manager" model="res.groups">
+        <field name="name">Variant Sources: Manager</field>
+        <field name="privilege_id" ref="privilege_smart_variant_sources"/>
+        <field name="sequence">20</field>
+        <field name="implied_ids" eval="[Command.link(ref('group_variant_source_user')), Command.link(ref('product.group_product_manager'))]"/>
+    </record>
+</odoo>

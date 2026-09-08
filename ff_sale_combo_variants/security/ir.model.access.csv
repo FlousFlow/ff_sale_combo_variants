@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ff_variant_source_user,ff.variant.source.user,model_ff_variant_source,group_variant_source_user,1,0,0,0
+access_ff_variant_source_manager,ff.variant.source.manager,model_ff_variant_source,group_variant_source_manager,1,1,1,1
+access_ff_variant_price_manager,ff.variant.price.manager,model_ff_variant_price,group_variant_source_manager,1,1,1,1
+access_ff_variant_price_user,ff.variant.price.user,model_ff_variant_price,group_variant_source_user,1,0,0,0
+access_ff_variant_source_wizard,ff.variant.source.sync.wizard,model_ff_variant_source_sync_wizard,group_variant_source_manager,1,1,1,1

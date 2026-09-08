@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="ff_sale_combo_variants.ComboConfiguratorDialog"
+       t-inherit="sale.ComboConfiguratorDialog"
+       t-inherit-mode="extension">
+
+        <!-- Insert template cards + variant selector right above the standard
+             flat product-card grid, only for combos that have Smart Variant
+             Sources. The standard cards remain visible below when no source
+             exists on that combo, guaranteeing zero regression. -->
+        <xpath expr="//div[hasclass('row', 'row-cols-1', 'row-cols-md-3')]" position="before">
+            <div t-if="hasFfSources(combo.id)" class="ff-template-groups container">
+                <div t-foreach="getFfTemplateGroups(combo.id)" t-as="group"
+                     t-key="group.source_id" class="ff-template-group border rounded p-2 mb-2">
+                    <button type="button"
+                            class="btn ff-template-btn w-100 d-flex justify-content-between align-items-center"
+                            t-att-class="isFfTemplateExpanded(group.source_id) ? 'btn-primary' : 'btn-outline-secondary'"
+                            t-on-click="() => this.ffSelectTemplate(combo, group)">
+                        <span t-out="group.template_name"/>
+                        <span class="badge text-bg-light" t-out="group.variants.length"/>
+                    </button>
+                    <div t-if="isFfTemplateExpanded(group.source_id)" class="ff-variant-selector mt-2 ps-3">
+                        <div t-foreach="group.variants" t-as="variant" t-key="variant.id">
+                            <button type="button" class="btn btn-sm btn-link"
+                                    t-out="variant.display_name"
+                                    t-on-click="() => this.ffSelectVariant(combo, group, variant.id)"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+
+    </t>
+
+</templates>

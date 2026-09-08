@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_combo_view_form_inherit_ff" model="ir.ui.view">
+        <field name="name">product.combo.form.inherit.ff_sale_combo_variants</field>
+        <field name="model">product.combo</field>
+        <field name="inherit_id" ref="product.product_combo_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <notebook>
+                    <page string="Smart Variant Sources" name="ff_variant_sources">
+                        <button name="action_view_variant_sources"
+                                type="object" class="btn-link mb-2" icon="fa-magic">
+                            Configure Smart Variant Sources
+                        </button>
+                        <field name="ff_variant_source_ids" no_create="1" readonly="1">
+                            <list decoration-warning="is_outdated">
+                                <field name="product_tmpl_id"/>
+                                <field name="variant_mode" widget="badge"/>
+                                <field name="eligible_variant_count" string="Eligible"/>
+                                <field name="generated_item_count" string="Generated"/>
+                                <field name="auto_sync" widget="boolean_toggle"/>
+                                <field name="is_outdated" column_invisible="1"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>

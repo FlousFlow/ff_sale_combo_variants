@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_sync_outdated_variant_sources" model="ir.cron">
+        <field name="name">Combo Variants: Sync Outdated Sources</field>
+        <field name="model_id" ref="model_ff_variant_source"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_sync_outdated_sources()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>

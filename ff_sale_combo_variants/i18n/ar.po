@@ -1,0 +1,522 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ff_sale_combo_variants
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260619\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-07 21:12+0000\n"
+"PO-Revision-Date: 2026-09-07 21:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_form
+msgid ""
+"<span class=\"text-warning fw-bold\" invisible=\"not is_outdated\">\n"
+"                        Out of sync — run Sync Variants Now\n"
+"                    </span>"
+msgstr ""
+"<span class=\"text-warning fw-bold\" invisible=\"not is_outdated\">\n"
+"                        غير متزامن — نفّذ مزامنة المتغيرات الآن\n"
+"                    </span>"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.constraint,message:ff_sale_combo_variants.constraint_ff_variant_source_combo_company_uniq
+msgid "A combo choice belongs to a single company."
+msgstr "خيار الكومبو يتبع شركة واحدة."
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/product_combo.py:0
+#: code:addons/ff_sale_combo_variants/models/product_combo_item.py:0
+msgid "A combo choice must contain at least 1 product."
+msgstr "يجب أن يحتوي خِيار المجموعة على منتج واحد في الأقل."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.constraint,message:ff_sale_combo_variants.constraint_ff_variant_source_combo_template_uniq
+msgid "A product template can only be configured once per combo choice."
+msgstr "لا يمكن تكوين قالب المنتج أكثر من مرة لكل خيار كومبو."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.constraint,message:ff_sale_combo_variants.constraint_ff_variant_price_source_variant_uniq
+msgid "A variant can only have one price per variant source."
+msgstr "لا يمكن أن يكون للمتغير أكثر من سعر لكل مصدر متغيرات."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.actions.act_window,help:ff_sale_combo_variants.ff_variant_source_action
+msgid ""
+"Add a product template to a combo choice once instead of adding every "
+"variant manually."
+msgstr "أضف قالب منتج واحد لخيار الكومبو بدلاً من إضافة كل متغير يدويًا."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields.selection,name:ff_sale_combo_variants.selection__ff_variant_source__variant_mode__all
+msgid "All Variants"
+msgstr "كل المتغيرات"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_form
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__auto_sync
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_search
+msgid "Auto Sync"
+msgstr "مزامنة تلقائية"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__auto_sync
+msgid ""
+"Automatically add newly created variants of the template to the combo "
+"choice, and remove archived ones."
+msgstr ""
+"إضافة المتغيرات الجديدة للقالب تلقائيًا إلى خيار الكومبو، وإزالة المؤرشف "
+"منها."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__combo_id
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_search
+msgid "Combo Choice"
+msgstr "خيار الكومبو"
+
+#. module: ff_sale_combo_variants
+#: model:ir.actions.server,name:ff_sale_combo_variants.ir_cron_sync_outdated_variant_sources_ir_actions_server
+msgid "Combo Variants: Sync Outdated Sources"
+msgstr "متغيرات الكومبو: مزامنة المصادر غير المتزامنة"
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+msgid "Combo products can't be combo choices."
+msgstr "منتجات الكومبو لا يمكن أن تكون خيارات كومبو."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__company_id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.product_combo_view_form_inherit_ff
+msgid "Configure Smart Variant Sources"
+msgstr "تكوين مصادر المتغيرات الذكية"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.actions.act_window,help:ff_sale_combo_variants.ff_variant_source_action
+msgid "Configure template-level variant sources"
+msgstr "تكوين مصادر المتغيرات على مستوى القالب"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__create_uid
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__create_uid
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source_sync_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__create_date
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__create_date
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source_sync_wizard__create_date
+msgid "Created on"
+msgstr "أُنشئ في"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__default_extra_price
+msgid "Default Extra Price"
+msgstr "السعر الإضافي الافتراضي"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__display_name
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__display_name
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source_sync_wizard__display_name
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_combo__display_name
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_combo_item__display_name
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_product__display_name
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_template__display_name
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_list
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.product_combo_view_form_inherit_ff
+msgid "Eligible"
+msgstr "المؤهلة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__eligible_variant_count
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__eligible_variant_ids
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_form
+msgid "Eligible Variants"
+msgstr "المتغيرات المؤهلة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__extra_price
+msgid "Extra Price"
+msgstr "سعر إضافي"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__default_extra_price
+msgid ""
+"Extra price applied to every generated combo item. Overridden by per-variant"
+" prices when defined."
+msgstr ""
+"سعر إضافي يطبق على كل عنصر كومبو مولد. يتم تجاوزه بأسعار كل متغير عند "
+"تحديدها."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_sale_order_line__ff_combo_item_is_generated
+msgid "Ff Combo Item Is Generated"
+msgstr "عنصر كومبو مولد"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_combo__ff_variant_source_count
+msgid "Ff Variant Source Count"
+msgstr "عدد مصادر المتغيرات"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (جهات الاتصال)"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_list
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.product_combo_view_form_inherit_ff
+msgid "Generated"
+msgstr "مولدة"
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_product__ff_generated_item_ids
+msgid "Generated Combo Items"
+msgstr "عناصر الكومبو المولدة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__generated_item_ids
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_form
+msgid "Generated Items"
+msgstr "العناصر المولدة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__generated_item_count
+msgid "Generated Items Count"
+msgstr "عدد العناصر المولدة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source_sync_wizard__id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_combo__id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_combo_item__id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_product__id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_template__id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_sale_order_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "عند التفعيل، الرسائل الجديدة تتطلب انتباهك."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__message_has_error
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "عند التفعيل، بعض الرسائل بها خطأ في التسليم."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__write_uid
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__write_uid
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source_sync_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__write_date
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__write_date
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source_sync_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الأنشطة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__is_outdated
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_search
+msgid "Out of Sync"
+msgstr "غير متزامن"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_product_template
+msgid "Product"
+msgstr "المنتج"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_product_combo
+msgid "Product Combo"
+msgstr "منتج يتكون من عدة عناصر"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_product_combo_item
+msgid "Product Combo Item"
+msgstr "منتج يتكون من عدة عناصر"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_ff_variant_source
+msgid "Product Combo Variant Source"
+msgstr "مصدر متغيرات خيار الكومبو"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_search
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_product_product
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__product_variant_id
+msgid "Product Variant"
+msgstr "متغير المنتج"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "بند أمر المبيعات"
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+msgid "Select the product variant for sources in 'Single Variant' mode."
+msgstr "اختر متغير المنتج للمصادر في وضع 'متغير واحد'."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__selected_variant_ids
+#: model:ir.model.fields.selection,name:ff_sale_combo_variants.selection__ff_variant_source__variant_mode__selected
+msgid "Selected Variants"
+msgstr "متغيرات محددة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_product__ff_variant_source_ids
+msgid "Selected-Variant Sources"
+msgstr "مصادر المتغيرات المحددة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__sequence
+msgid "Sequence"
+msgstr "الترتيب"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_product_combo_item__ff_variant_source_id
+msgid ""
+"Set when this combo item was generated by a Smart Variant Source. Empty for "
+"manual items, which are never touched by the sync engine."
+msgstr ""
+"يُضبط عندما يتم توليد عنصر الكومبو بواسطة مصدر متغيرات ذكي. فارغ للعناصر "
+"اليدوية التي لا تلمسها المزامنة أبدًا."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__product_variant_id
+#: model:ir.model.fields.selection,name:ff_sale_combo_variants.selection__ff_variant_source__variant_mode__single
+msgid "Single Variant"
+msgstr "متغير واحد"
+
+#. module: ff_sale_combo_variants
+#: model:ir.actions.act_window,name:ff_sale_combo_variants.ff_variant_source_action
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_combo__ff_variant_source_ids
+#: model:ir.ui.menu,name:ff_sale_combo_variants.menu_variant_sources
+#: model:res.groups.privilege,name:ff_sale_combo_variants.privilege_smart_variant_sources
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.product_combo_view_form_inherit_ff
+msgid "Smart Variant Sources"
+msgstr "مصادر المتغيرات الذكية"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source_sync_wizard__source_count
+msgid "Sources to Sync"
+msgstr "عدد المصادر للمزامنة"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_ff_variant_source_sync_wizard
+msgid "Sync All Variant Sources"
+msgstr "مزامنة كل مصادر المتغيرات"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_form
+msgid "Sync Variants Now"
+msgstr "مزامنة المتغيرات الآن"
+
+#. module: ff_sale_combo_variants
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_form
+msgid "Template"
+msgstr "القالب"
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_price.py:0
+msgid "The variant must belong to the variant source's product template."
+msgstr "يجب أن يتبع المتغير قالب منتج مصدر المتغيرات."
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+msgid ""
+"The variant source must belong to the same company as its combo choice."
+msgstr "يجب أن يتبع مصدر المتغيرات نفس شركة خيار الكومبو."
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+msgid "Tick at least one variant for sources in 'Selected Variants' mode."
+msgstr "حدد متغيرًا واحدًا على الأقل للمصادر في وضع 'متغيرات محددة'."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__is_outdated
+msgid "True when the generated items no longer match the eligible variants."
+msgstr "صحيح عندما لا تطابق العناصر المولدة المتغيرات المؤهلة."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__variant_mode
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_search
+msgid "Variant Mode"
+msgstr "وضع المتغيرات"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__price_ids
+#: model_terms:ir.ui.view,arch_db:ff_sale_combo_variants.ff_variant_source_view_form
+msgid "Variant Prices"
+msgstr "أسعار المتغيرات"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_price__variant_source_id
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_product_combo_item__ff_variant_source_id
+msgid "Variant Source"
+msgstr "مصدر المتغيرات"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model,name:ff_sale_combo_variants.model_ff_variant_price
+msgid "Variant Source Extra Price"
+msgstr "السعر الإضافي لمصدر المتغيرات"
+
+#. module: ff_sale_combo_variants
+#: model:res.groups,name:ff_sale_combo_variants.group_variant_source_manager
+msgid "Variant Sources: Manager"
+msgstr "مصادر المتغيرات: مدير"
+
+#. module: ff_sale_combo_variants
+#: model:res.groups,name:ff_sale_combo_variants.group_variant_source_user
+msgid "Variant Sources: User"
+msgstr "مصادر المتغيرات: مستخدم"
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+msgid "Variants synchronized."
+msgstr "تمت مزامنة المتغيرات."
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,field_description:ff_sale_combo_variants.field_ff_variant_source__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: ff_sale_combo_variants
+#: model:ir.model.fields,help:ff_sale_combo_variants.field_ff_variant_source__website_message_ids
+msgid "Website communication history"
+msgstr "سجل التواصل عبر الموقع"
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+msgid ""
+"You cannot delete variant sources whose generated combo items are referenced"
+" by %s sale order line(s). Deactivate the source instead to keep historical "
+"orders intact."
+msgstr ""
+"لا يمكنك حذف مصادر المتغيرات التي تشير إليها أسطر أوامر بيع. عطّل المصدر "
+"بدلاً من ذلك للحفاظ على الأوامر التاريخية سليمة."
+
+#. module: ff_sale_combo_variants
+#. odoo-python
+#: code:addons/ff_sale_combo_variants/models/ff_variant_source.py:0
+msgid "ff_variant_source_id"
+msgstr "معرف مصدر المتغيرات"

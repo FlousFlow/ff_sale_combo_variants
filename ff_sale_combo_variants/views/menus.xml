@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_variant_sources"
+              name="Smart Variant Sources"
+              action="ff_variant_source_action"
+              parent="sale.prod_config_main"
+              groups="ff_sale_combo_variants.group_variant_source_user"
+              sequence="16"/>
+</odoo>
